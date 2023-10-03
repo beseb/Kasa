@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+@mixin h1_mixin($text-color, $responsive){
+    font-family: $primary-font-family;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 68.45px;
+    color:$text-color;
+    @if($responsive == 'mobile'){
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+
+@mixin h2_mixin($text-color,$responsive){
+    font-family: $primary-font-family;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34.22px;
+    color: $text-color;
+    @if $responsive == 'mobile'{
+        font-size: 18px;
+        line-height: 17.11px;
+    }
+}
+
+// Pas besoin de version mobile pour les H3
+@mixin h3_mixin($text-color,$responsive){
+    font-family: $primary-font-family;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    color: $text-color;
+    @if $responsive == 'mobile'{
+    font-size: 14px;
+    }
+}
+
+@mixin p_mixin($text-color,$responsive){
+    font-family: $primary-font-family;
+    font-size: 14px ;
+    font-weight: 500;
+    color: $text-color;
+    @if $responsive == 'mobile'{
+        font-size: 10px;
+        }
+}

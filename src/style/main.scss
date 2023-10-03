@@ -1,0 +1,14 @@
+
+@import 'variables';
+@import 'mixins';
+
+@import 'components/header';
+@import 'components/footer';
+
+@import 'pages/accueil';
+@import 'pages/about';
+@import 'pages/erreur.scss';
+@import 'pages/about.scss';
+
+@import 'responsive/desktop.scss';
+@import 'responsive/mobile.scss';

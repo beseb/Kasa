@@ -1,0 +1,22 @@
+@media screen and (max-width: 680px) {
+  .header {
+    &__logo--desktop {
+      display: none;
+    }
+    &__logo--mobile {
+      display: block;
+    }
+    &__links a {
+      @include h2_mixin($primary-color, 'mobile');
+      text-decoration: none;
+    }
+  }
+.footer{
+    & p{
+        @include h2_mixin(white, 'mobile')
+    }
+}
+
+
+}
+

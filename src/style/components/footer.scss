@@ -1,0 +1,15 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+
+footer{
+    width: 100vw;
+    height: 209px;
+    margin: 0px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        @include h2_mixin(white,desktop);
+}

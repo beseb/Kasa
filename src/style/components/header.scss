@@ -1,0 +1,15 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px;
+  &__links a {
+    @include h2_mixin($primary-color, "desktop");
+    text-decoration: none;
+    padding-right: 60px;
+  }
+}
