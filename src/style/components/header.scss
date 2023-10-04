@@ -6,24 +6,45 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 60px;
+  margin: 40px 100px 0px 100px;
+  &__logo--mobile {
+    display: none;
+  }
+  &__links {
+    // height: 20px;
+    // width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    gap: 15%;
+  }
   &__links a {
     @include h2_mixin($primary-color, 'desktop');
     text-decoration: none;
-    padding-right: 60px;
   }
 }
 @media screen and (max-width: 680px) {
   .header {
+    margin: 20px 20px 0px 20px;
+
     &__logo--desktop {
       display: none;
     }
     &__logo--mobile {
-      display: block;
+      display: flex;
+      width: 40%;
+      height: auto;
+    }
+    &__links{
+      gap: 0%;
     }
     &__links a {
       @include h2_mixin($primary-color, 'mobile');
-      text-decoration: none;
+      font-size: 12px;
+      margin: 0px 10% 0px;
+      white-space: nowrap;
     }
+    
   }
 }

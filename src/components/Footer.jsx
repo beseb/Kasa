@@ -5,9 +5,11 @@ import '../style/components/footer.scss'
 function Footer() {
   return (
     <footer>
-      <img src={FooterLogoDesktop} alt="Logo Kasa B&W" />
-      <img src={FooterLogoMobile} alt="Logo Kasa B&W" style={{display:'none'}} />
-      <p> &copy; 2020 Kasa. All rights reserved</p>
+      <div>
+        <img src={FooterLogoDesktop} alt="Logo Kasa B&W" className='footer__logo--desktop' />
+        <img src={FooterLogoMobile} alt="Logo Kasa B&W" className='footer__logo--mobile'/>
+        <p> &copy; 2020 Kasa. All rights reserved</p>
+      </div>
     </footer>
   )
 }

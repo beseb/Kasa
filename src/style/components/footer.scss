@@ -10,8 +10,36 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
     position: absolute;
     bottom: 0;
     left: 0;
   @include h2_mixin(white, desktop);
+  .footer__logo--mobile{
+    display: none;
+  }
+  & p{
+    padding-top: 1%;
+    text-align: center;
+  }
+  @media screen and (max-width: 680px){
+    .footer__logo--mobile{
+      display: flex;
+    }
+    .footer__logo--desktop{
+      display: none;
+    }
+    & div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    & p{
+      font-size: 12px;
+      line-height: 17.11px;
+      text-align: center;
+      width: 100px;
+    }
+  }
 }

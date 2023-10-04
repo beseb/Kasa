@@ -7,10 +7,10 @@ function Header(){
 
     return <nav className="header">
         <img src={HeaderLogoDesktop} alt="Logo Kasa" className="header__logo--desktop"/>
-        <img src={HeaderLogoMobile} alt="Logo Kasa" className="header__logo--mobile" style={{ display: 'none' }} />
+        <img src={HeaderLogoMobile} alt="Logo Kasa" className="header__logo--mobile"  />
         <div className="header__links">
-            <Link to={'/'}>Accueil</Link>
-            <Link to='/About'>A propos</Link>
+            <Link to={'/'}>ACCUEIL</Link>
+            <Link to='/About'>A PROPOS</Link>
         </div>
        
     </nav>
