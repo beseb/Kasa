@@ -1,4 +1,14 @@
 
+*{
+ margin: 0px ;
+ padding: 0px;  
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+
 @import 'variables';
 @import 'mixins';
 
@@ -10,5 +20,3 @@
 @import 'pages/erreur.scss';
 @import 'pages/about.scss';
 
-@import 'responsive/desktop.scss';
-@import 'responsive/mobile.scss';

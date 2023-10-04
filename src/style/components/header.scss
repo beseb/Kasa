@@ -8,8 +8,22 @@
   align-items: center;
   margin: 60px;
   &__links a {
-    @include h2_mixin($primary-color, "desktop");
+    @include h2_mixin($primary-color, 'desktop');
     text-decoration: none;
     padding-right: 60px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header {
+    &__logo--desktop {
+      display: none;
+    }
+    &__logo--mobile {
+      display: block;
+    }
+    &__links a {
+      @include h2_mixin($primary-color, 'mobile');
+      text-decoration: none;
+    }
   }
 }

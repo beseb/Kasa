@@ -1,15 +1,17 @@
 @import '../variables.scss';
 @import '../mixins.scss';
 
-
-footer{
-    width: 100vw;
-    height: 209px;
-    margin: 0px;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-        @include h2_mixin(white,desktop);
+footer {
+  width: 100vw;
+  height: 209px;
+  margin: 10px 0px 0px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  @include h2_mixin(white, desktop);
 }
