@@ -1,31 +1,49 @@
 @import '../variables.scss';
 @import '../mixins.scss';
 
+
 .erreur {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 100%;
-  margin-bottom: 100px;
+  gap: 139px;
+  position: relative;
+  top: 250px;
+
   &__title {
     @include h1_mixin($primary-color, desktop);
-    font-size: 200px !important;
-    font-weight: 700 !important;
-    // line-height: 411px;
+    font-size: 200px;
+    font-weight: 700;
     letter-spacing: 0em;
+    // line-height: 410px;
   }
   &__text {
     @include h2_mixin($primary-color, desktop);
     font-size: 30px;
-    // line-height: 51.34px;
+    text-align: center
   }
   &__link {
     @include p_mixin($primary-color, desktop);
     padding-top: 50px;
   }
-  @media only screen and (max-width: 767px) {
-    /* Mettez votre code CSS ici */
-  }
+}
+@media only screen and (max-width: 768px) {
   
+
+  .erreur {
+  top: 50px;
+  gap: 50px;
+
+    &__title {
+      font-size: 96px;
+      line-height: 136px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+    &__link{
+      padding-top: 0px;
+    }
+  }
 }

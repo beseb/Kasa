@@ -13,14 +13,17 @@ import Locations from './pages/Locations'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Accueil />}></Route>
-        <Route path="/About" element={<About />}></Route>
-        <Route path="*" element={<Erreur />}></Route>
-        <Route path="/Locations" element={<Locations />}></Route>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+  <div className="app-container">
+    <Header />
+    <Routes>
+      <Route path="/" element={<Accueil />}></Route>
+      <Route path="/About" element={<About />}></Route>
+      <Route path="*" element={<Erreur />}></Route>
+      <Route path="/Locations" element={<Locations />}></Route>
+    </Routes>
+    <Footer />
+  </div>
+</BrowserRouter>
+
   </React.StrictMode>,
 )

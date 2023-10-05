@@ -24,9 +24,9 @@
     text-decoration: none;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 767px) {
   .header {
-    margin: 20px 20px 0px 20px;
+    margin: $main_margin--mobile;
 
     &__logo--desktop {
       display: none;
