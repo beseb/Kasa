@@ -26,7 +26,7 @@
     padding: 0px;
   }
 
-  .location__card {
+  .location__list--card {
     width: 30%;
     height: 340px;
     min-height: 340px;
@@ -43,7 +43,7 @@
       height: 255px;
     }
   }
-  .location__title {
+  .location__list--title {
     @include h2_mixin(white, 'desktop');
     padding: 10px;
   }

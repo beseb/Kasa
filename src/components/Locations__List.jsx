@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
-import '../style/components/locations.scss'
+import '../style/components/locations__list.scss'
 
-
-function Locations() {
+function Locations__List() {
   const [locations, setLocations] = useState([])
 
   useEffect(() => {
@@ -22,15 +21,14 @@ function Locations() {
       {locations.map((location) => (
         <li
           key={location.id}
-          className="location__card"
+          className="location__list--card"
           style={{ backgroundImage: `url(${location.cover})` }}
         >
-          
-          <h2 className="location__title">{location.title}</h2>
+          <h2 className="location__list--title">{location.title}</h2>
         </li>
       ))}
     </ul>
   )
 }
 
-export default Locations
+export default Locations__List
