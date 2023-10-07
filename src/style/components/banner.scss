@@ -2,44 +2,51 @@
 @import '../variables.scss';
 
 .banner {
+  position: relative;
+  width: 100%;
+  height: 223px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
+
+  .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 25px;
+  }
+
+  &__text {
     position: relative;
     width: 100%;
-    height: 223px;
-    border-radius: 25px;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    @include h1_mixin(white, 'desktop');
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-  
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      background-position: center;
-      background-size: cover;
-      opacity: 0.3;
-      z-index: 1; // Change the z-index to 1
+    .mobile-break {
+      display: none;
     }
-  
-    &__content { // Add this new class
-      position: relative; // Position it relative to the .banner element
-      z-index: 2; // Make sure it's above the ::before pseudo-element
-    }
-  
-    &__text {
-      @include h1_mixin(white, 'desktop');
-    }
+  }
 }
 
-#accueil::before {
+#accueil {
   background-image: url('../../assets/Banner/Image\ source\ 1_Accueil.png');
 }
 
-#about::before {
+#about {
   background-image: url('../../assets/Banner/Image\ source\ 2_About.png');
 }
 
@@ -49,6 +56,11 @@
 
     &__text {
       @include h1_mixin(white, 'mobile');
+      justify-content: flex-start;
+      padding-left: 15px;
+      .mobile-break {
+        display: block;
+      }
     }
   }
 }

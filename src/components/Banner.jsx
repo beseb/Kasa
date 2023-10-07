@@ -1,22 +1,16 @@
 import '/src/style/components/banner.scss'
 // On importe le main scss car les marges sont écrites dans le main.scss
 import '/src/style/main.scss'
+import Banner__text from './Banner__text'
 
 // La propriété 'page' est attendue dans les props
+// eslint-disable-next-line react/prop-types
 function Banner({ page }) {
-  let banner__text = 'Chez vous, partout et ailleurs';
-
-  if (page === 'about') {
-    banner__text = '';
-  }
-  
   return (
     <div className={`banner`} id={page}>
-      <div className="banner__content">
-        <h1 className="banner__text">{banner__text}</h1>
-      </div>
+      <Banner__text page = {page}/>
     </div>
-  );
+  )
 }
 
-export default Banner;
+export default Banner
