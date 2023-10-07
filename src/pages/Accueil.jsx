@@ -7,8 +7,7 @@ import Locations from '../components/Locations';
 function Accueil(){
     return <div id='main'> 
         <Banner page="accueil"></Banner>
-        <h1>
-        Ceci est la page d'accueil qsdfqsdf</h1>
+   
         <Locations/>
         </div>
 }

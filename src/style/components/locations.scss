@@ -1,0 +1,51 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.locations__list {
+  width: 100%;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+  margin-top: 45px;
+
+  padding: 50px;
+  border-radius: 25px;
+  list-style: none;
+  box-sizing: border-box;
+  @media screen and (max-width:768px) {
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px;
+  }
+
+  .location__card {
+    width: 30%;
+    height: 340px;
+    min-height: 340px;
+    border-radius: 10px;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-end;
+    @media screen and (max-width:768px) {
+      width: 100%;
+      height: 255px;
+    }
+  }
+  .location__title {
+    @include h2_mixin(white, 'desktop');
+    padding: 10px;
+  }
+  
+}
