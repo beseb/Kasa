@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import '../style/components/locations__list.scss'
 
 function Locations__List() {
@@ -21,10 +22,16 @@ function Locations__List() {
       {locations.map((location) => (
         <li
           key={location.id}
-          className="location__list--card"
+          className="locations__list--card"
           style={{ backgroundImage: `url(${location.cover})` }}
         >
-          <h2 className="location__list--title">{location.title}</h2>
+          <Link
+            to={`/Locations/${location.id}`}
+            className="locations__list--link"
+            style={{ height: '100%', width: '100%' }}
+          >
+            <h2 className="locations__list--title">{location.title}</h2>
+          </Link>
         </li>
       ))}
     </ul>

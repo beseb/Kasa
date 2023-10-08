@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import HeaderLogoDesktop from '../assets/Logo/LOGO_desktop.png'
 import HeaderLogoMobile from '../assets/Logo/LOGO_mobile.png'
