@@ -9,7 +9,7 @@ import About from './pages/About'
 import Accueil from './pages/Accueil'
 import Erreur from './pages/Erreur'
 import Locations from './pages/Locations'
-
+import '../public/data/logements.json'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
