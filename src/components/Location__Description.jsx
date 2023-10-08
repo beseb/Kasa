@@ -1,11 +1,9 @@
-import Location__Gallery from "./Location__Gallery"
 
-function Locations__Description(props){
+// eslint-disable-next-line react/prop-types
+function Location__Description({description}){
 
-return <section className="location__description--container">
-   
+return <span className="location__description">{description}</span>
 
-</section>
 }
 
-export default Locations__Description
+export default Location__Description

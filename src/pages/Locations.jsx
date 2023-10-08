@@ -5,8 +5,9 @@ import '../style/pages/locations.scss'
 import Location__Description from '../components/Location__Description'
 import Location__Tags from '../components/Location__Tags'
 import Location__Host from '../components/Location__Host'
+import Location__Rating from '../components/Location__Rating'
 import Location__Gallery from '../components/Location__Gallery'
-import Location__Equipment from '../components/Location_Equipment'
+import Location__Equipments from '../components/Location__Equipments'
 import { useParams } from 'react-router-dom'
 import '../../public/data/logements.json'
 import { useEffect, useState } from 'react'
@@ -31,21 +32,25 @@ function Locations() {
   }, [])
 
   let logement = logements.find((element) => element.id == id)
-  
 
   if (logement) {
     return (
       <div id="main">
-        <h1>{logement.title}</h1>
-        <Location__Gallery props={logement} />
+        {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la gallerie d'images !!! */}
+        <Location__Gallery cover={logement.cover} />
+        {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la gallerie d'images !!! */}
+
         <h1 className="location__description--title">{logement.title}</h1>
         <p className="location__description--city">{logement.location}</p>
 
-        <Location__Tags props={logement} />
-        <Location__Tags props={logement} />
-        <Location__Host props={logement} />
-        <Location__Description props={logement} />
-        <Location__Equipment props={logement} />
+        <Location__Tags tags={logement.tags} />
+        <Location__Host
+          name={logement.host.name}
+          picture={logement.host.picture}
+        />
+        <Location__Rating rating={logement.rating} />
+        <Location__Description description={logement.description} />
+        <Location__Equipments equipments={logement.equipments} />
       </div>
     )
   }
