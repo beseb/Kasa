@@ -1,3 +1,65 @@
 @import '../variables.scss';
 @import '../mixins.scss';
 
+.location__main--wrapper {
+  .location__TitleCity--container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+    .location--title {
+      @include h1_mixin($primary-color, 'desktop');
+      font-size: 36px;
+      line-height: 51px;
+    }
+    .location--city {
+      @include h2_mixin($primary-color, 'desktop');
+      line-height: 20px;
+    }
+  }
+
+  .location__tags--container {
+    width: auto;
+    height: 25px;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    & li {
+      list-style: none;
+      background-color: $primary-color;
+      border-radius: 10px;
+      min-width: auto;
+      padding: 5px 20px;
+      text-align: center;
+      @include p_mixin(white, 'desktop');
+    }
+  }
+
+  .location__host--container {
+    height: 64px;
+    width: auto;
+    display: flex;
+    gap: 10px;
+    float: right;
+    .location__host--name {
+      padding: 6px 0px;
+      @include h3_mixin($primary-color, 'desktop');
+    }
+    .location__host--picture {
+      height: 64px;
+      width: 64px;
+      border-radius: 100%;
+    }
+  }
+  .location__rating--container{
+    display: flex;
+    gap: 4px;
+    float: right;
+    .stars{
+        height: 36px;
+        width: 36px;
+    }
+  }
+}

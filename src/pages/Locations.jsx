@@ -36,21 +36,23 @@ function Locations() {
   if (logement) {
     return (
       <div id="main">
-        {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la gallerie d'images !!! */}
-        <Location__Gallery cover={logement.cover} />
-        {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la gallerie d'images !!! */}
-
-        <h1 className="location__description--title">{logement.title}</h1>
-        <p className="location__description--city">{logement.location}</p>
-
-        <Location__Tags tags={logement.tags} />
-        <Location__Host
-          name={logement.host.name}
-          picture={logement.host.picture}
-        />
-        <Location__Rating rating={logement.rating} />
-        <Location__Description description={logement.description} />
-        <Location__Equipments equipments={logement.equipments} />
+        <div className="location__main--wrapper">
+          {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la galerie d'images !!! */}
+          <Location__Gallery cover={logement.cover} />
+          {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la galerie d'images !!! */}
+          <div className="location__TitleCity--container">
+            <h1 className="location--title">{logement.title}</h1>
+            <p className="location--city">{logement.location}</p>
+          </div>
+          <Location__Tags tags={logement.tags} />
+          <Location__Host
+            name={logement.host.name}
+            picture={logement.host.picture}
+          />
+          <Location__Rating rating={logement.rating} />
+          <Location__Description description={logement.description} />
+          <Location__Equipments equipments={logement.equipments} />
+        </div>{' '}
       </div>
     )
   }

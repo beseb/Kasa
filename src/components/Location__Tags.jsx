@@ -4,14 +4,13 @@ function Location__Tags({ tags }) {
 
   return (
     <ul
-      className="Location__Tags--container"
-      style={{ backgroundColor: 'green', height: '100px', width: '100px' }}
+      className="location__tags--container"
     >
       {tags.map((tag, index) => {
         return (
           <li
             key={`${index}`}
-            style={{ backgroundColor: 'blue', height: '40px', width: '40px' }}
+           
           >
             {tag}
           </li>

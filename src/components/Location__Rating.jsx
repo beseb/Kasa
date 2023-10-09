@@ -1,7 +1,8 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 
+// eslint-disable-next-line react/prop-types
 function Location__Rating({ rating }) {
   const stars = []
   // Boucle pour créer les étoiles
@@ -9,12 +10,13 @@ function Location__Rating({ rating }) {
     if (i < rating) {
       // Ajouter une étoile pleine si le rating est supérieur à l'index de la boucle
       stars.push(
-        <FontAwesomeIcon icon={faEnvelope} style={{color: "#3a2903",}} />
+        <FontAwesomeIcon icon={faStar} style={{color: "#FA6060",}} id= {i} className='stars' />
       )
     } else {
       // Ajouter une étoile vide sinon
       stars.push(
-        <img key={i} className="star empty-star" style={{color:"grey"}} src="../../public/star-inactive 2.png"/>
+        <FontAwesomeIcon icon={faStar} style={{color: "#E3E3E3"}} id={i} className='stars'/>
+      
     
 
 
