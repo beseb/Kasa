@@ -1,70 +1,63 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import styled from 'styled-components';
-
-const AccordionWrapper = styled.div`
-  max-width: 400px;
-  background-color: #fa6060;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 5px;
-`;
-
-const AccordionHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  padding: 10px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-`;
-
-const AccordionIcon = styled.div`
-  transition: transform 0.3s ease;
-`;
-
-const AccordionContent = styled.div`
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 10px;
-  color: white;
-  
-  ${({ isOpen }) =>
-    isOpen &&
-    `
-    max-height: 500px;
-  `}
-`;
+/* eslint-disable react/prop-types */
+import { useState } from 'react'
+import '../style/components/accordion.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faChevronUp,
+  faChevronDown,
+  faRotate,
+} from '@fortawesome/free-solid-svg-icons'
 
 function Accordion({ title, content }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
-  return (
-    <AccordionWrapper>
-      <AccordionHeader onClick={toggleAccordion}>
-        <h3>{title}</h3>
-        <AccordionIcon>
-          {isOpen ? (
-            <FontAwesomeIcon icon={faChevronUp} style={{ color: 'white' }} />
-          ) : (
-            <FontAwesomeIcon icon={faChevronDown} style={{ color: 'white' }} />
-          )}
-        </AccordionIcon>
-      </AccordionHeader>
-      <AccordionContent isOpen={isOpen}>
-        {content}
-      </AccordionContent>
-    </AccordionWrapper>
-  );
+  if (Array.isArray(content)) {
+    return (
+      <div className="accordion__container">
+        <div className="accordion__header" onClick={toggleAccordion}>
+          <h3>{title}</h3>
+          <FontAwesomeIcon
+            icon={faChevronUp}
+            className="icons"
+            style={{
+              transform: `rotate(${isOpen ? -180 : 0}deg)`,
+              transition: 'transform 0.5s ease',
+            }}
+          />
+        </div>
+        <div className={`accordion__content ${isOpen ? 'open' : ''}`} >
+          <ul>
+            {content.map((element, index) => {
+              return <li key={index}>{element}</li>
+            })}
+          </ul>
+        </div>
+      </div>
+    )
+  } else {
+    return (
+      <div className="accordion__container">
+        <div className="accordion__header" onClick={toggleAccordion}>
+          <h3>{title}</h3>
+          <FontAwesomeIcon
+            icon={faChevronUp}
+            className="icons"
+            style={{
+              transform: `rotate(${isOpen ? -180 : 0}deg)`,
+              transition: 'transform 0.5s ease',
+            }}
+          />
+        </div>
+        <div className={`accordion__content ${isOpen ? 'open' : ''}`}>
+          {content}
+        </div>
+      </div>
+    )
+  }
 }
 
-export default Accordion;
+export default Accordion

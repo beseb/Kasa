@@ -11,7 +11,7 @@ function About() {
   const respect_content =
     'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou perturbation du voisinage entraînera une exclusion de notre plateforme.'
   const securite_content =
-    "La sécurité est la priorité de Kasa. Aussi bien pour nos h^tes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôtel qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
+    "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôtel qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
   const service_content =
     "Kasa est le choix idéal pour trouver des hébergements de qualité pour vos voyages. Nous offrons un large choix de logements confortables et bien équipés, ainsi qu'un service clientèle exceptionnel pour vous aider à trouver l'hébergement qui correspond le mieux à vos besoins."
 
