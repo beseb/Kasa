@@ -8,6 +8,7 @@ import Location__Host from '../components/Location__Host'
 import Location__Rating from '../components/Location__Rating'
 import Location__Gallery from '../components/Location__Gallery'
 import Location__Equipments from '../components/Location__Equipments'
+import Accordion from '../components/Accordion'
 import { useParams } from 'react-router-dom'
 import '../../public/data/logements.json'
 import { useEffect, useState } from 'react'
@@ -50,8 +51,8 @@ function Locations() {
             picture={logement.host.picture}
           />
           <Location__Rating rating={logement.rating} />
-          <Location__Description description={logement.description} />
-          <Location__Equipments equipments={logement.equipments} />
+        <Accordion title='Description' content={logement.description}/>
+        <Accordion title='Equipement' content={logement.equipments}/>
         </div>{' '}
       </div>
     )

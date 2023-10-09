@@ -10,12 +10,12 @@ function Location__Rating({ rating }) {
     if (i < rating) {
       // Ajouter une étoile pleine si le rating est supérieur à l'index de la boucle
       stars.push(
-        <FontAwesomeIcon icon={faStar} style={{color: "#FA6060",}} id= {i} className='stars' />
+        <FontAwesomeIcon icon={faStar} style={{color: "#FA6060",}} key= {i} className='stars' />
       )
     } else {
       // Ajouter une étoile vide sinon
       stars.push(
-        <FontAwesomeIcon icon={faStar} style={{color: "#E3E3E3"}} id={i} className='stars'/>
+        <FontAwesomeIcon icon={faStar} style={{color: "#E3E3E3"}} key={i} className='stars'/>
       
     
 
