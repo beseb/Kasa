@@ -33,6 +33,7 @@ function LocationsItem({ id }) {
 
   let logement = logements.find((element) => element.id == id)
 
+  // Si l'id n'est pas trouvé dans le fichier.json
   if (!logement) {
     return <Erreur/>
   } else {
@@ -42,7 +43,7 @@ function LocationsItem({ id }) {
           <Location__Carousel pictures={logement.pictures} />
           <div className="location__TitleCity--container">
             <h1 className="location--title">{logement.title}</h1>
-            <p className="location--city">{logement.location}</p>
+            <h2 className="location--city">{logement.location}</h2>
           </div>
           <Location__Tags tags={logement.tags} />
           <Location__Host
