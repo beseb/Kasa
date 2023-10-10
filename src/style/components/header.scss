@@ -13,32 +13,34 @@
   }
   &__links {
     width: fit-content;
-    gap: 15px;
-    display: flex;
-  }
-  &__links a {
+    gap: 60px;
     @include h2_mixin($primary-color, 'desktop');
     text-decoration: none;
   }
+ 
 }
 @media screen and (max-width: 768px) {
   .header {
     margin: $main_margin--mobile;
     justify-content: space-between;
+    gap: 30px;
 
     &__logo--desktop {
       display: none;
     }
     &__logo--mobile {
       display: flex;
-      width: 40%;
+      width: 100%;
       height: auto;
     }
-    &__links a {
-      display: flex;
-      margin: 0;
-      @include h2_mixin($primary-color, 'mobile');
-      font-size: 12px;
+    &__links {
+      gap: 25px;
+      & a{
+        line-height: 17px;
+        @include h2_mixin($primary-color, 'mobile');
+        font-size: 12px;
+        margin: 0;
+      }
     }
   }
 }

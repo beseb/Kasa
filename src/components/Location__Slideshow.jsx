@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
-function Location__Carousel({ pictures }) {
+function Location__slideshow({ pictures }) {
   const [index, setIndex] = useState(0)
   let totalLength = pictures.length
 
@@ -21,32 +21,29 @@ function Location__Carousel({ pictures }) {
 
   return (
     <div
-      className="carousel__container"
+      className="slideshow__container"
       style={{
         backgroundImage: `url(${pictures[index]})`,
-        backgroundSize: 'fill',
-        backgroundPosition: 'center',
-        height: '415px',
-        width: '100%',
+     
       }}
     >
       <FontAwesomeIcon
         icon={faChevronLeft}
-        className="carousel__icons left"
+        className="slideshow__icons left"
         onClick={handlePrevious}
         style={{float: 'left'}}
       />
       <FontAwesomeIcon
         icon={faChevronRight}
-        className="carousel__icons" id='right'
+        className="slideshow__icons" id='right'
         onClick={handleNext}
         style={{float:'right'}}
       />
-      <span className="carousel__counter">
+      <span className="slideshow__counter">
         {index + 1} / {pictures.length}
       </span>
     </div>
   )
 }
 
-export default Location__Carousel
+export default Location__slideshow

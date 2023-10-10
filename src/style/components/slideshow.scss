@@ -1,0 +1,35 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.slideshow__container {
+  grid-column: 1/3;
+  border-radius: 25px;
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: 768px) {
+    min-height: 255px;
+  }
+
+  .slideshow__icons {
+    color: white;
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: 40%;
+    @media screen and (max-width: 768px) {
+      height: 24px;
+      width: 24px;
+    }
+  }
+  .slideshow__counter {
+    @include h3_mixin(white, 'desktop');
+    position: relative;
+    top: 90%;
+    left: 42%;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}

@@ -7,7 +7,7 @@
 @import 'components/banner';
 @import 'components/locations__list.scss';
 @import 'components/collapsible.scss';
-@import 'components/carousel.scss';
+@import 'components/slideshow.scss';
 
 @import 'pages/accueil';
 @import 'pages/about';
@@ -35,7 +35,6 @@
 #root{
     display: flex;
     flex-direction: column;
-    min-width: 320px;
 }
 *{
  margin: 0px ;
