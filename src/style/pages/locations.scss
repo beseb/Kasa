@@ -2,30 +2,60 @@
 @import '../mixins.scss';
 
 .location__main--wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 30px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    grid-gap: 10px;
+  }
+
+  .carousel__container {
+    grid-column: 1/3;
+  }
   .location__TitleCity--container {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    grid-column: 1/2;
+
     display: flex;
     flex-direction: column;
-    gap: 0px;
 
+    @media screen and (max-width:768px) {
+      grid-column: 1/3;
+      gap: 10px;
+    }
     .location--title {
       @include h1_mixin($primary-color, 'desktop');
       font-size: 36px;
       line-height: 51px;
+      @media screen and (max-width: 768px) {
+        @include h1_mixin($primary-color, 'mobile');
+      }
     }
     .location--city {
       @include h2_mixin($primary-color, 'desktop');
       line-height: 20px;
+      @media screen and (max-width: 768px) {
+        @include h2_mixin($primary-color, 'mobile');
+      }
     }
   }
 
   .location__tags--container {
+    grid-column: 1/2;
+    grid-row: 3/4;
     width: auto;
     height: 25px;
     list-style: none;
     display: flex;
     gap: 10px;
+    @media screen and (max-width: 768px) {
+      gap: 5px;
+      height: 20px;
+      width: max-content;
+    }
     & li {
       list-style: none;
       background-color: $primary-color;
@@ -34,32 +64,72 @@
       padding: 5px 20px;
       text-align: center;
       @include p_mixin(white, 'desktop');
+      @media screen and (max-width: 768px) {
+        @include p_mixin(white, 'mobile');
+        padding: 5px 10px;
+      }
     }
   }
 
   .location__host--container {
+    grid-column: 2/3;
+    grid-row: 2/3;
     height: 64px;
-    width: auto;
     display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
     gap: 10px;
-    float: right;
+    @media screen and (max-width: 768px) {
+      grid-row: 4/5;
+      gap: 0;
+  
+    }
     .location__host--name {
       padding: 6px 0px;
       @include h3_mixin($primary-color, 'desktop');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (max-width: 768px) {
+        @include h3_mixin($primary-color, 'mobile');
+        font-size: 12px;
+      }
     }
     .location__host--picture {
       height: 64px;
       width: 64px;
       border-radius: 100%;
+      @media screen and (max-width: 768px) {
+        height: 32px;
+        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
-  .location__rating--container{
+  .location__rating--container {
+    grid-column: 2/3;
+    grid-row: 3/4;
     display: flex;
+    justify-content: flex-end;
     gap: 4px;
     float: right;
-    .stars{
-        height: 36px;
-        width: 36px;
+    .stars {
+      height: 36px;
+      width: 36px;
+    }
+    @media screen and (max-width: 768px) {
+      justify-content: flex-start;
+      align-items: center;
+      width: min-content;
+      grid-row: 4/5;
+      grid-column: 1/2;
+      .stars {
+        height: 18px;
+        width: 18px;
+      }
     }
   }
 }

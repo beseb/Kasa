@@ -37,7 +37,7 @@ function Locations() {
       <div id="main">
         <div className="location__main--wrapper">
           {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la galerie d'images !!! */}
-          <Location__Carousel pictures={logement.pictures} />
+          <Location__Carousel pictures={logement.cover} />
           {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la galerie d'images !!! */}
           <div className="location__TitleCity--container">
             <h1 className="location--title">{logement.title}</h1>
@@ -49,8 +49,17 @@ function Locations() {
             picture={logement.host.picture}
           />
           <Location__Rating rating={logement.rating} />
-        <Accordion title='Description' content={logement.description}/>
-        <Accordion title='Equipement' content={logement.equipments}/>
+          <Accordion
+            title="Description"
+            content={logement.description}
+            page="location__description"
+            
+          />
+          <Accordion
+            title="Equipement"
+            content={logement.equipments}
+            page="location__equipment"
+          />
         </div>{' '}
       </div>
     )

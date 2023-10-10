@@ -7,16 +7,14 @@ import {
 // eslint-disable-next-line react/prop-types
 function Location__Carousel({ pictures }) {
   console.log(pictures)
-    const carousel= () =>{
-
-        
-    }
 
   return (
-    <div className="carousel__container">
+    <div
+      className="carousel__container"
+      style={{ backgroundImage: `url(${pictures})`, backgroundSize :'cover', height:'415px', width:'100%'}}
+    >
       <FontAwesomeIcon icon={faChevronLeft} className="carousel_icons" />
       <FontAwesomeIcon icon={faChevronRight} className="carousel_icons" />
-      <span>${`{count}'/'(setCount}`}</span>
     </div>
   )
 }

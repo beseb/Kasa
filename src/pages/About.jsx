@@ -19,10 +19,10 @@ function About() {
     <div id="main">
       <Banner page="about" /><div className="accordion__about--wrapper">
           
-          <Accordion title="Fiabilité" content={fiabilité_content} />
-          <Accordion title="Respect" content={respect_content} />
-          <Accordion title="Service" content={service_content} />
-          <Accordion title="Sécurité" content={securite_content} />
+          <Accordion title="Fiabilité" content={fiabilité_content} page='about' />
+          <Accordion title="Respect" content={respect_content} page='about'/>
+          <Accordion title="Service" content={service_content} page='about'/>
+          <Accordion title="Sécurité" content={securite_content} page='about'/>
       </div>
     </div>
   )

@@ -2,13 +2,9 @@
 import { useState } from 'react'
 import '../style/components/accordion.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faChevronUp,
-  faChevronDown,
-  faRotate,
-} from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-function Accordion({ title, content }) {
+function Accordion({ title, content, page }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleAccordion = () => {
@@ -17,7 +13,7 @@ function Accordion({ title, content }) {
 
   if (Array.isArray(content)) {
     return (
-      <div className="accordion__container">
+      <div className={`accordion__container ${page}`}>
         <div className="accordion__header" onClick={toggleAccordion}>
           <h3>{title}</h3>
           <FontAwesomeIcon
@@ -29,7 +25,7 @@ function Accordion({ title, content }) {
             }}
           />
         </div>
-        <div className={`accordion__content ${isOpen ? 'open' : ''}`} >
+        <div className={`accordion__content ${page} ${isOpen ? 'open' : ''}` }>
           <ul>
             {content.map((element, index) => {
               return <li key={index}>{element}</li>
@@ -40,7 +36,7 @@ function Accordion({ title, content }) {
     )
   } else {
     return (
-      <div className="accordion__container">
+      <div className={`accordion__container ${page}`}>
         <div className="accordion__header" onClick={toggleAccordion}>
           <h3>{title}</h3>
           <FontAwesomeIcon
@@ -52,7 +48,7 @@ function Accordion({ title, content }) {
             }}
           />
         </div>
-        <div className={`accordion__content ${isOpen ? 'open' : ''}`}>
+        <div className={`accordion__content ${page} ${isOpen ? 'open' : ''}`}>
           {content}
         </div>
       </div>
