@@ -1,8 +1,8 @@
 import '../style/pages/about.scss'
 // On importe le main scss car les marges sont écrites dans le main.scss
 import '/src/style/main.scss'
-import '../style/components/accordion.scss'
-import Accordion from '../components/Accordion'
+import '../style/components/collapsible.scss'
+import Collapsible from '../components/Collapsible'
 
 import Banner from '../components/Banner'
 function About() {
@@ -17,12 +17,12 @@ function About() {
 
   return (
     <div id="main">
-      <Banner page="about" /><div className="accordion__about--wrapper">
+      <Banner page="about" /><div className="collapsible__about--wrapper">
           
-          <Accordion title="Fiabilité" content={fiabilité_content} page='about' />
-          <Accordion title="Respect" content={respect_content} page='about'/>
-          <Accordion title="Service" content={service_content} page='about'/>
-          <Accordion title="Sécurité" content={securite_content} page='about'/>
+          <Collapsible title="Fiabilité" content={fiabilité_content} page='about' />
+          <Collapsible title="Respect" content={respect_content} page='about'/>
+          <Collapsible title="Service" content={service_content} page='about'/>
+          <Collapsible title="Sécurité" content={securite_content} page='about'/>
       </div>
     </div>
   )

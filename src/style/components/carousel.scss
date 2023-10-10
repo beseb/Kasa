@@ -1,0 +1,31 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.carousel__container {
+  border-radius: 25px;
+  height: 415px;
+  width: 100%;
+  background-size: cover;
+  background-position: 'center';
+
+.carousel__icons{
+    color: white;
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: 40%;
+   @media screen and (max-width:768px) {
+    height: 24px;
+    width: 24px;
+   }
+}
+    .carousel__counter{
+        @include h3_mixin(white,'desktop');
+        position: relative;
+        top: 90%;
+        left: 42%;
+        @media screen and (max-width:768px) {
+          display: none;
+        }
+    }
+}

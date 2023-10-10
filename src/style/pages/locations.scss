@@ -60,7 +60,9 @@
       list-style: none;
       background-color: $primary-color;
       border-radius: 10px;
-      min-width: auto;
+      width: 90px;
+      min-width: fit-content;
+
       padding: 5px 20px;
       text-align: center;
       @include p_mixin(white, 'desktop');

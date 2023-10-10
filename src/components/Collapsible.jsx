@@ -1,20 +1,20 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
-import '../style/components/accordion.scss'
+import '../style/components/collapsible.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-function Accordion({ title, content, page }) {
+function Collapsible({ title, content, page }) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggleAccordion = () => {
+  const toggleCollapsible = () => {
     setIsOpen(!isOpen)
   }
 
   if (Array.isArray(content)) {
     return (
-      <div className={`accordion__container ${page}`}>
-        <div className="accordion__header" onClick={toggleAccordion}>
+      <div className={`collapsible__container ${page}`}>
+        <div className="collapsible__header" onClick={toggleCollapsible}>
           <h3>{title}</h3>
           <FontAwesomeIcon
             icon={faChevronUp}
@@ -25,7 +25,7 @@ function Accordion({ title, content, page }) {
             }}
           />
         </div>
-        <div className={`accordion__content ${page} ${isOpen ? 'open' : ''}` }>
+        <div className={`collapsible__content ${page} ${isOpen ? 'open' : ''}` }>
           <ul>
             {content.map((element, index) => {
               return <li key={index}>{element}</li>
@@ -36,8 +36,8 @@ function Accordion({ title, content, page }) {
     )
   } else {
     return (
-      <div className={`accordion__container ${page}`}>
-        <div className="accordion__header" onClick={toggleAccordion}>
+      <div className={`collapsible__container ${page}`}>
+        <div className="collapsible__header" onClick={toggleCollapsible}>
           <h3>{title}</h3>
           <FontAwesomeIcon
             icon={faChevronUp}
@@ -48,7 +48,7 @@ function Accordion({ title, content, page }) {
             }}
           />
         </div>
-        <div className={`accordion__content ${page} ${isOpen ? 'open' : ''}`}>
+        <div className={`collapsible__content ${page} ${isOpen ? 'open' : ''}`}>
           {content}
         </div>
       </div>
@@ -56,4 +56,4 @@ function Accordion({ title, content, page }) {
   }
 }
 
-export default Accordion
+export default Collapsible

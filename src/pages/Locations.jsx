@@ -6,7 +6,7 @@ import Location__Tags from '../components/Location__Tags'
 import Location__Host from '../components/Location__Host'
 import Location__Rating from '../components/Location__Rating'
 import Location__Carousel from '../components/Location__Carousel'
-import Accordion from '../components/Accordion'
+import Collapsible from '../components/Collapsible'
 import { useParams } from 'react-router-dom'
 import '../../public/data/logements.json'
 import { useEffect, useState } from 'react'
@@ -36,9 +36,7 @@ function Locations() {
     return (
       <div id="main">
         <div className="location__main--wrapper">
-          {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la galerie d'images !!! */}
-          <Location__Carousel pictures={logement.cover} />
-          {/* Attention !! Changer le props de Location__Gallery pour qu'il affiche la galerie d'images !!! */}
+          <Location__Carousel pictures={logement.pictures} />
           <div className="location__TitleCity--container">
             <h1 className="location--title">{logement.title}</h1>
             <p className="location--city">{logement.location}</p>
@@ -49,13 +47,13 @@ function Locations() {
             picture={logement.host.picture}
           />
           <Location__Rating rating={logement.rating} />
-          <Accordion
+          <Collapsible
             title="Description"
             content={logement.description}
             page="location__description"
             
           />
-          <Accordion
+          <Collapsible
             title="Equipement"
             content={logement.equipments}
             page="location__equipment"
