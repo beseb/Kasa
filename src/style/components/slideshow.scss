@@ -10,6 +10,10 @@
   background-position: center;
   @media screen and (max-width: 768px) {
     min-height: 255px;
+    max-width: 100vh;
+    height: auto;
+    border-radius: 10px; ;
+    grid-column: 1/2;
   }
 
   .slideshow__icons {

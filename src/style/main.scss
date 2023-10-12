@@ -6,7 +6,7 @@
 @import 'components/footer';
 @import 'components/banner';
 @import 'components/locations__list.scss';
-@import 'components/collapsible.scss';
+@import 'components/collapse.scss';
 @import 'components/slideshow.scss';
 
 @import 'pages/accueil';
@@ -16,14 +16,16 @@
 
 #main{
     min-height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     margin: $main_margin--desktop;
+    // overflow: hidden;
     @media screen and (max-width:768px) {
             margin: $main_margin--mobile;
-
+            height:100% ;
         
     }
 }
@@ -31,6 +33,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 100vh;
   }
 #root{
     display: flex;

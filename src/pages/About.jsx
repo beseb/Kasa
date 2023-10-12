@@ -1,8 +1,8 @@
 import '../style/pages/about.scss'
 // On importe le main scss car les marges sont écrites dans le main.scss
 import '/src/style/main.scss'
-import '../style/components/collapsible.scss'
-import Collapsible from '../components/Collapsible'
+import '../style/components/collapse.scss'
+import Collapse from '../components/Collapse'
 
 import Banner from '../components/Banner'
 function About() {
@@ -13,16 +13,15 @@ function About() {
   const securite_content =
     "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôtel qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
   const service_content =
-    "Kasa est le choix idéal pour trouver des hébergements de qualité pour vos voyages. Nous offrons un large choix de logements confortables et bien équipés, ainsi qu'un service clientèle exceptionnel pour vous aider à trouver l'hébergement qui correspond le mieux à vos besoins."
-
+  "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question." 
   return (
     <div id="main">
-      <Banner page="about" /><div className="collapsible__about--wrapper">
+      <Banner page="about" /><div className="collapse__about--wrapper">
           
-          <Collapsible title="Fiabilité" content={fiabilité_content} page='about' />
-          <Collapsible title="Respect" content={respect_content} page='about'/>
-          <Collapsible title="Service" content={service_content} page='about'/>
-          <Collapsible title="Sécurité" content={securite_content} page='about'/>
+          <Collapse title="Fiabilité" content={fiabilité_content} page='about' />
+          <Collapse title="Respect" content={respect_content} page='about'/>
+          <Collapse title="Service" content={service_content} page='about'/>
+          <Collapse title="Sécurité" content={securite_content} page='about' className="Collapse__item--securite"/>
       </div>
     </div>
   )
