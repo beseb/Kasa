@@ -22,10 +22,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/Locations" element={<LocationsPage />}>
             <Route path=":id" element={<LocationsItem />} />
           </Route>
-          <Route path="*" element={<Erreur />}></Route>
+          <Route path="*" element={<Erreur />} />
         </Routes>
         <Footer />
-              </div>
+      </div>
     </BrowserRouter>
   </React.StrictMode>,
 )

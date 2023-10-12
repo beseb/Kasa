@@ -1,20 +1,20 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
-import '../style/components/collapsible.scss'
+import '../style/components/collapse.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-function Collapsible({ title, content, page }) {
+function Collapse({ title, content, page }) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggleCollapsible = () => {
+  const toggleCollapse = () => {
     setIsOpen(!isOpen)
   }
-
+  
   if (Array.isArray(content)) {
     return (
-      <div className={`collapsible__container ${page}`}>
-        <div className="collapsible__header" onClick={toggleCollapsible}>
+      <div className={`collapse__container ${page}`}>
+        <div className="collapse__header" onClick={toggleCollapse}>
           <h3>{title}</h3>
           <FontAwesomeIcon
             icon={faChevronUp}
@@ -25,7 +25,7 @@ function Collapsible({ title, content, page }) {
             }}
           />
         </div>
-        <div className={`collapsible__content ${page} ${isOpen ? 'open' : ''}` }>
+        <div className={`collapse__content ${page} ${isOpen ? 'opened' : 'closed'}` }>
           <ul>
             {content.map((element, index) => {
               return <li key={index}>{element}</li>
@@ -36,8 +36,8 @@ function Collapsible({ title, content, page }) {
     )
   } else {
     return (
-      <div className={`collapsible__container ${page}`}>
-        <div className="collapsible__header" onClick={toggleCollapsible}>
+      <div className={`collapse__container ${page}`}>
+        <div className="collapse__header" onClick={toggleCollapse}>
           <h3>{title}</h3>
           <FontAwesomeIcon
             icon={faChevronUp}
@@ -48,7 +48,7 @@ function Collapsible({ title, content, page }) {
             }}
           />
         </div>
-        <div className={`collapsible__content ${page} ${isOpen ? 'open' : ''}`}>
+        <div className={`collapse__content ${page} ${isOpen ? 'opened' : 'closed'}`}>
           {content}
         </div>
       </div>
@@ -56,4 +56,4 @@ function Collapsible({ title, content, page }) {
   }
 }
 
-export default Collapsible
+export default Collapse
