@@ -4,7 +4,7 @@ import '../style/components/collapse.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-function Collapse({ title, content, page }) {
+function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleCollapse = () => {
@@ -13,7 +13,7 @@ function Collapse({ title, content, page }) {
   
   if (Array.isArray(content)) {
     return (
-      <div className={`collapse__container ${page}`}>
+      <div className={`collapse__container `}>
         <div className="collapse__header" onClick={toggleCollapse}>
           <h3>{title}</h3>
           <FontAwesomeIcon
@@ -25,7 +25,7 @@ function Collapse({ title, content, page }) {
             }}
           />
         </div>
-        <div className={`collapse__content ${page} ${isOpen ? 'opened' : 'closed'}` }>
+        <div className={`collapse__content  ${isOpen ? 'open' : ''}` }>
           <ul>
             {content.map((element, index) => {
               return <li key={index}>{element}</li>
@@ -36,7 +36,7 @@ function Collapse({ title, content, page }) {
     )
   } else {
     return (
-      <div className={`collapse__container ${page}`}>
+      <div className={`collapse__container `}>
         <div className="collapse__header" onClick={toggleCollapse}>
           <h3>{title}</h3>
           <FontAwesomeIcon
@@ -48,7 +48,7 @@ function Collapse({ title, content, page }) {
             }}
           />
         </div>
-        <div className={`collapse__content ${page} ${isOpen ? 'opened' : 'closed'}`}>
+        <div className={`collapse__content  ${isOpen ? 'open' : ''}`}>
           {content}
         </div>
       </div>

@@ -1,3 +1,27 @@
 @import '../variables.scss';
 @import '../mixins.scss';
 
+#collapses_about_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0px;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  .collapse__content {
+    top: 0px ;
+}
+.open {
+  top: -20px;
+  padding-top: 5%;
+}
+@media screen and (max-width: 768px) {
+    .collapse__content{
+    }
+    .open {
+        top: -30px;
+        padding-top: 8%;
+    }
+}
+}

@@ -53,16 +53,18 @@ function LocationsItem({ id }) {
             picture={logement.host.picture}
           />
           <Location__Rating rating={logement.rating} />
-          <Collapse
-            title="Description"
-            content={logement.description}
-            page="location__description"
-          />
-          <Collapse
-            title="Equipement"
-            content={logement.equipments}
-            page="location__equipment"
-          />
+          <div className="collapses__section" id='collapses_host_page'>
+            <Collapse
+              title="Description"
+              content={logement.description}
+              page="location__description"
+            />
+            <Collapse
+              title="Equipement"
+              content={logement.equipments}
+              page="location__equipment"
+            />
+          </div>
         </div>
       </div>
     )
