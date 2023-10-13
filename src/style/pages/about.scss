@@ -6,22 +6,30 @@
   flex-direction: column;
   align-items: center;
   margin: 30px 0px;
+  margin-bottom: 10px !important;
   justify-content: space-between;
-  gap: 30px;
+  gap: 3em;
   position: relative;
   .collapse__content {
-    top: 0px ;
-}
-.open {
-  top: -20px;
-  padding-top: 5%;
-}
-@media screen and (max-width: 768px) {
-    .collapse__content{
-    }
+    top: 0px;
+  }
+  footer {
+    margin-top: 0;
+  }
+  #main {
+    height: auto;
+  }
+  .open {
+    top: -20px;
+    padding-top: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media screen and (max-width: 768px) {
     .open {
-        top: -30px;
-        padding-top: 8%;
+      top: -1.3em;
+
+      padding-top: 4%;
     }
-}
+  }
 }

@@ -2,25 +2,27 @@
 @import '../mixins.scss';
 
 .collapses__section {
-display: flex;
-width: 100%;
-height: min-content;
-justify-content: space-between;
-gap: 2%;
-overflow: hidden;
-margin-bottom: -10Px;
-@media screen and (max-width:768px) {
-  flex-direction: column;
-  margin-bottom: 10%;
-  gap: 20px;
-}
+  display: flex;
+  width: 100%;
+  height: min-content;
+  justify-content: space-between;
+  gap: 10%;
+  overflow: hidden;
+  margin-bottom: 1%;
+  border-radius: 10px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 3%;
+    gap: 20px;
+  }
 
   .collapse__container {
     box-sizing: border-box;
     width: 48%;
     overflow: hidden;
+    border-radius: 10px;
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
     }
 
@@ -43,36 +45,37 @@ margin-bottom: -10Px;
 
     .collapse__content {
       width: 100%;
-      // height: auto;
       background-color: #f6f6f6;
-      border-radius: 10px;
-      padding-top: 0%;
+      padding-top: 0px;
       position: relative;
-      top: -12%;
       z-index: -1;
       height: 0;
-      overflow: hidden;
+      // overflow: hidden;
       @include p_mixin($primary-color, 'desktop');
-      font-size: 18px;
+      font-size: 16px;
       line-height: 26px;
       transform: translateY(-50px);
       transition: all 1s ease;
       opacity: 0;
 
       @media screen and (max-width: 768px) {
-        font-size: 12px;
+        font-size: 10px;
         border-radius: 5px;
         line-height: 17px;
       }
     }
     .open {
+      border-radius: 10px;
       height: 100%;
-
-      padding: 5% 5px;
+      width: auto;
+      padding: 5% 10px;
       padding-bottom: 10px;
       transform: translateY(0);
       opacity: 1;
       transition: all 1s ease;
+      top: -1.3em;
+      @media screen and (max-width: 768px) {
+      }
     }
   }
 }
