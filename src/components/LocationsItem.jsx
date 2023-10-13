@@ -5,7 +5,7 @@ import '../style/pages/locations.scss'
 import Location__Tags from './Location__Tags'
 import Location__Host from './Location__Host'
 import Location__Rating from './Location__Rating'
-import Location__Carousel from './Location__Slideshow'
+import Slideshow from './Slideshow'
 import Collapse from './Collapse'
 import { useNavigate } from 'react-router-dom'
 import '../../public/data/logements.json'
@@ -45,7 +45,7 @@ function LocationsItem({ id }) {
     return (
       <div id="main">
         <div className="location__main--wrapper" >
-          <Location__Carousel pictures={logement.pictures} />
+          <Slideshow pictures={logement.pictures} />
           <div className="location__TitleCity--container">
             <h1 className="location--title">{logement.title}</h1>
             <h2 className="location--city">{logement.location}</h2>

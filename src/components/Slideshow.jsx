@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
-function Location__slideshow({ pictures }) {
+function Slideshow({ pictures }) {
   const [index, setIndex] = useState(0)
   let totalLength = pictures.length
 
@@ -46,4 +46,4 @@ function Location__slideshow({ pictures }) {
   )
 }
 
-export default Location__slideshow
+export default Slideshow
