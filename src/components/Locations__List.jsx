@@ -9,7 +9,6 @@ function Locations__List() {
     fetch('/data/logements.json')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
         setLocations(data)
       })
       .catch((err) => {

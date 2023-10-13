@@ -13,8 +13,7 @@ import { useEffect, useState } from 'react'
 
 function LocationsItem({ id }) {
   // On récupère l'id via l'URL du logement recherche
-  // const { id } = useParams()
-  //console.log({ id })
+
   // On fetch toutes les infos depuis le json
 
   const [logements, setLogements] = useState([])
@@ -22,7 +21,6 @@ function LocationsItem({ id }) {
     fetch('/data/logements.json')
     .then((response) => response.json())
     .then((data) => {
-      console.log(data)
       setLogements(data)
     })
     .catch((error) => {
@@ -36,7 +34,6 @@ function LocationsItem({ id }) {
 
   const navigate = useNavigate()
 
-  // console.log(logement)
   // Si l'id n'est pas trouvé dans le fichier.json
   if (!logement) {
     navigate('/Erreur', { state: { message: 'Failed to find hosting id' } })

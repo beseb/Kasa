@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 function Location__Tags({ tags }) {
-  console.log(tags)
 
   return (
     <ul

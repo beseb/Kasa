@@ -6,7 +6,7 @@ import Locations__List from '../components/Locations__List';
 
 function Accueil(){
     return <div id='main'> 
-        <Banner page="accueil"></Banner>
+        <Banner page="accueil"/>
    
         <Locations__List/>
         </div>
