@@ -4,15 +4,15 @@
 .collapses__section {
   display: flex;
   width: 100%;
-  height: min-content;
+  height: fit-content;
   justify-content: space-between;
   gap: 10%;
   overflow: hidden;
-  margin-bottom: 1%;
+  margin-bottom: 50px;
   border-radius: 10px;
   @media screen and (max-width: 768px) {
+    height: auto;
     flex-direction: column;
-    margin-bottom: 3%;
     gap: 20px;
   }
 
@@ -50,7 +50,6 @@
       position: relative;
       z-index: -1;
       height: 0;
-      // overflow: hidden;
       @include p_mixin($primary-color, 'desktop');
       font-size: 16px;
       line-height: 26px;
@@ -74,6 +73,7 @@
       opacity: 1;
       transition: all 1s ease;
       top: -1.3em;
+      margin-bottom: 25px;
       @media screen and (max-width: 768px) {
       }
     }

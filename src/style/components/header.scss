@@ -6,41 +6,47 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 100px 0px 100px;
+  width: auto;
+  margin: $main-margin--desktop;
 
-  &__logo--mobile {
+  // revoir la height
+  height: 10%;
+  .header__logo--desktop {
+    display: block;
+  }
+  .header__logo--mobile {
     display: none;
   }
-  &__links {
-    width: fit-content;
+  .header__links {
+    display: flex;
     gap: 60px;
     @include h2_mixin($primary-color, 'desktop');
-    text-decoration: none;
+
+    & a {
+      text-decoration: none;
+    }
+    & a:visited {
+      color: $primary-color;
+    }
   }
- 
 }
 @media screen and (max-width: 768px) {
   .header {
     margin: $main_margin--mobile;
-    justify-content: space-between;
-    gap: 30px;
-
-    &__logo--desktop {
+    gap: 20px;
+    .header__logo--desktop {
       display: none;
     }
-    &__logo--mobile {
-      display: flex;
-      width: 56%;
-      height: auto;
+    .header__logo--mobile {
+      display: block;
+      width: 130px;
+      margin: 0px;
     }
-    &__links {
-      gap: 25px;
-      & a{
-        line-height: 17px;
-        @include h2_mixin($primary-color, 'mobile');
-        font-size: 12px;
-        margin: 0;
-      }
+    .header__links {
+      width: auto;
+      gap: 20px;
+      font-size: 0.7em;
+      flex-wrap: nowrap;
     }
   }
 }
