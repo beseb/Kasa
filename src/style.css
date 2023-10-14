@@ -281,10 +281,11 @@ footer p {
   transform: translateY(-50px);
   transition: all 1s ease;
   opacity: 0;
+  top: -1.3em;
 }
 @media screen and (max-width: 768px) {
   .collapses__section .collapse__container .collapse__content {
-    font-size: 10px;
+    font-size: 12px;
     border-radius: 5px;
     line-height: 17px;
   }
@@ -379,15 +380,14 @@ footer p {
 }
 
 .erreur {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  gap: 139px;
-  position: relative;
-  top: 250px;
+  margin-bottom: 2%;
 }
-.erreur__title {
+.erreur .erreur__title {
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: 500;
@@ -397,7 +397,7 @@ footer p {
   font-weight: 700;
   letter-spacing: 0em;
 }
-.erreur__text {
+.erreur .erreur__text {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 500;
@@ -406,28 +406,24 @@ footer p {
   font-size: 30px;
   text-align: center;
 }
-.erreur__link {
+.erreur .erreur__link {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #ff6060;
-  padding-top: 50px;
 }
 
 @media only screen and (max-width: 768px) {
   .erreur {
-    top: 50px;
     gap: 50px;
+    margin-bottom: 10%;
   }
-  .erreur__title {
+  .erreur .erreur__title {
     font-size: 96px;
     line-height: 136px;
   }
-  .erreur__text {
+  .erreur .erreur__text {
     font-size: 18px;
-  }
-  .erreur__link {
-    padding-top: 0px;
   }
 }
 #collapses_about_page {

@@ -56,9 +56,10 @@
       transform: translateY(-50px);
       transition: all 1s ease;
       opacity: 0;
+      top: -1.3em;
 
       @media screen and (max-width: 768px) {
-        font-size: 10px;
+        font-size: 12px;
         border-radius: 5px;
         line-height: 17px;
       }
