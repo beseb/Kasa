@@ -60,12 +60,12 @@ function LocationsItem({ id }) {
           <Collapse
             title="Description"
             content={logement.description}
-            page="location__description"
+            id="location__description"
           />
           <Collapse
             title="Equipement"
             content={logement.equipments}
-            page="location__equipment"
+            id="location__equipment"
           />
         </div>
       </div>
