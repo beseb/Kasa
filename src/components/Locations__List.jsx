@@ -22,7 +22,9 @@ function Locations__List() {
         <li
           key={location.id}
           className="locations__list--card"
-          style={{ backgroundImage: `url(${location.cover})` }}
+          style={{
+            backgroundImage: `linear-gradient(180deg, rgba(255,255,255,1) 0%,rgba(0,0,0,0.4) 85%, rgba(0,0,0,1) 100%), url(${location.cover})`,
+          }}
         >
           <Link
             to={`/Locations/${location.id}`}

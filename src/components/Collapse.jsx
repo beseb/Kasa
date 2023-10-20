@@ -26,7 +26,7 @@ function Collapse({ title, content }) {
         <div className={isOpen ? 'content open' : 'content'}>
           <ul>
             {content.map((element, index) => {
-              return <li key={index}>{element}</li>
+              return <li key={index} style={{listStyle: 'none'}}>{element}</li>
             })}
           </ul>
         </div>

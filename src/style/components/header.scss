@@ -49,4 +49,15 @@
       flex-wrap: nowrap;
     }
   }
+  @media screen and (max-width:400px) {
+    .header{
+    margin: $main_margin--max400px;}
+    
+  }
+  @media screen and (max-width:375px) {
+    .header{
+    margin: $main_margin--max375px;
+    padding: 0% 0% 1% 1%;}
+  }
+  
 }

@@ -8,16 +8,12 @@
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 2%;
-  // gap: 139px;
-  // position: relative;
-  // top: 250px;
 
   .erreur__title {
     @include h1_mixin($primary-color, desktop);
     font-size: 200px;
     font-weight: 700;
     letter-spacing: 0em;
-    // line-height: 410px;
   }
   .erreur__text {
     @include h2_mixin($primary-color, desktop);
@@ -26,7 +22,6 @@
   }
   .erreur__link {
     @include p_mixin($primary-color, desktop);
-    // padding-top: 50px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -39,9 +34,6 @@
     }
     .erreur__text {
       font-size: 18px;
-    }
-    .erreur__link {
-      // padding-top: 0px;
     }
   }
 }

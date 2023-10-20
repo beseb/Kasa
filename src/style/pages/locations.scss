@@ -16,7 +16,7 @@
   grid-template-rows: repeat(4, auto);
   grid-gap: 25px;
   @media screen and (max-width: 768px) {
-    width: 100%;
+    // width: 100%;
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
     grid-gap: 0;
@@ -28,6 +28,7 @@
     grid-column: 1/2;
     display: flex;
     flex-direction: column;
+    padding: 1%;
 
     @media screen and (max-width: 768px) {
       grid-column: 1/2;
@@ -54,18 +55,15 @@
     grid-column: 1/2;
     grid-row: 3/4;
     width: auto;
-    // height: 25px;
     list-style: none;
     display: flex;
     align-items: center;
     gap: 10px;
-    // margin-bottom: 30px;
     @media screen and (max-width: 768px) {
       gap: 5px;
       height: 20px;
       width: 90%;
-      flex-wrap: wrap;
-    
+      padding: 1%;
     }
     & li {
       list-style: none;
@@ -118,6 +116,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1%;
       }
     }
   }
@@ -138,6 +137,7 @@
       width: min-content;
       grid-column: 1/2;
       grid-row: 4/5;
+      padding: 1%;
       .stars {
         height: 18px;
         width: 18px;

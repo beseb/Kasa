@@ -19,6 +19,7 @@
     margin: 0;
     padding: 10px;
     background-color: $primary-color;
+    
     @include h3_mixin(white, 'desktop');
     font-size: 24px;
     @media screen and (max-width: 768px) {
@@ -38,16 +39,28 @@
     padding-right: 10px;
     background-color: #f6f6f6;
     z-index: -1;
+
     @media screen and (max-width: 768px) {
       font-size: 12px;
+      // min-height: 0;
     }
-
+    
     &.open {
+
+      font-size: 1em;
       height: auto;
+      min-height: 160px;
       padding-top: $collapse_header-height * 1.02;
-      padding-bottom: $collapse_header-height * 0.5;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 1em;
       opacity: 1;
       transition: all 1s ease;
+
+      @media screen and (max-width:768px) {
+        padding-top: 2em;
+        min-height: 0;
+      }
     }
   }
 }

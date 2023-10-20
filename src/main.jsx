@@ -17,12 +17,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <div className="app-container">
         <Header />
         <Routes>
+          <Route path="/" element={<Accueil />} />
           <Route path="/Accueil" element={<Accueil />}></Route>
           <Route path="/About" element={<About />}></Route>
           <Route path="/Locations" element={<LocationsPage />}>
             <Route path=":id" element={<LocationsItem />} />
           </Route>
-          <Route path='*' element={<Erreur/>}/>
+          <Route path="*" element={<Erreur />} />
         </Routes>
         <Footer />
       </div>

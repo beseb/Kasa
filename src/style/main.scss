@@ -24,11 +24,19 @@
   @media screen and (max-width: 768px) {
     margin: $main_margin--mobile;
   }
+  @media screen and (max-width:400px) {
+    margin: $main_margin--max400px;
+    
+  }
+  @media screen and (max-width:375px) {
+    margin: $main_margin--max375px;
+    padding: 0% 0% 1% 1%;
+  }
 }
 .app-container {
   display: flex;
   flex-direction: column;
-
+  min-width: 350px;
 }
 #root {
   display: flex;
