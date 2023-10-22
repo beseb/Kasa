@@ -24,20 +24,20 @@ function Slideshow({ pictures }) {
       className="slideshow__container"
       style={{
         backgroundImage: `url(${pictures[index]})`,
-     
       }}
     >
       <FontAwesomeIcon
         icon={faChevronLeft}
         className="slideshow__icons left"
         onClick={handlePrevious}
-        style={{float: 'left'}}
+        style={{ float: 'left' }}
       />
       <FontAwesomeIcon
         icon={faChevronRight}
-        className="slideshow__icons" id='right'
+        className="slideshow__icons"
+        id="right"
         onClick={handleNext}
-        style={{float:'right'}}
+        style={{ float: 'right' }}
       />
       <span className="slideshow__counter">
         {index + 1} / {pictures.length}

@@ -21,6 +21,12 @@
   justify-content: flex-start;
   align-items: center;
   margin: $main_margin--desktop;
+  @media screen and (max-width: 950px) {
+    margin: $main_margin--max950px;
+  }
+  @media screen and (max-width: 800px){
+    margin: $main_margin--max800px;
+  }
   @media screen and (max-width: 768px) {
     margin: $main_margin--mobile;
   }

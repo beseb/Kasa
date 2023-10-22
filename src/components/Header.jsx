@@ -7,14 +7,14 @@ import '/src/style/main.scss'
 function Header() {
   return (
     <nav className="header">
-      <a href={'/Accueil'}  className="header__logo--desktop">
+      <a href={'/Accueil'} className="header__logo--desktop">
         <img
           src={HeaderLogoDesktop}
           alt="Logo Kasa"
           className="header__logo--desktop"
         />
       </a>
-      <a href={'/Accueil'}  className="header__logo--mobile">
+      <a href={'/Accueil'} className="header__logo--mobile">
         <img
           src={HeaderLogoMobile}
           alt="Logo Kasa"

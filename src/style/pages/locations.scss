@@ -68,12 +68,15 @@
       list-style: none;
       background-color: $primary-color;
       border-radius: 10px;
-      width: 90px;
+      width: 6em;
       min-width: fit-content;
 
       padding: 5px 20px;
       text-align: center;
       @include p_mixin(white, 'desktop');
+      @media screen and (max-width: 900px) {
+        width: 5.8em;
+      }
       @media screen and (max-width: 768px) {
         @include p_mixin(white, 'mobile');
         padding: 5px 10px;
