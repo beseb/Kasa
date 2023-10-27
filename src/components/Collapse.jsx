@@ -43,7 +43,7 @@ function Collapse({ title, content }) {
           {title}
           <FontAwesomeIcon
             icon={faChevronUp}
-            style={{ transform: isOpen ? 'rotate(-180deg)' : 'rotate(0deg)' }}
+            style={{ transform: isOpen ? 'rotate(-180deg)' : 'rotate(0deg)',transition: 'all 0.7s ease' }}
           />
         </div>
         <div className={isOpen ? 'content open' : 'content'}>{content}</div>
