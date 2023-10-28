@@ -3,23 +3,25 @@ import '../style/pages/about.scss'
 import '/src/style/main.scss'
 import '../style/components/collapse.scss'
 import Collapse from '../components/Collapse'
-import {
-  fiabilité_content,
-  respect_content,
-  service_content,
-  securite_content,
-} from '../../public/data/about.js'
+import AboutDatas from '../../public/data/about.json'
 import Banner from '../components/Banner'
 
+// map les données pour les collapses
 function About() {
+  const datas = AboutDatas
+
   return (
     <div id="main">
       <Banner page="about" />
       <div className="collapses__section" id="collapses_about_page">
-        <Collapse title="Fiabilité" content={fiabilité_content} page="about" />
-        <Collapse title="Respect" content={respect_content} page="about" />
-        <Collapse title="Service" content={service_content} page="about" />
-        <Collapse title="Sécurité" content={securite_content} page="about" />
+        {datas.map((data, index) => (
+          <Collapse
+            key={index}
+            title={data.title}
+            content={data.content}
+            page="about"
+          />
+        ))}
       </div>
     </div>
   )

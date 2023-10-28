@@ -9,7 +9,6 @@
   width: auto;
   margin: $main-margin--desktop;
 
-  // revoir la height
   height: 10%;
   .header__logo--desktop {
     display: block;
@@ -47,17 +46,18 @@
       gap: 20px;
       font-size: 0.7em;
       flex-wrap: nowrap;
+    
     }
   }
-  @media screen and (max-width:400px) {
-    .header{
-    margin: $main_margin--max400px;}
-    
+  @media screen and (max-width: 400px) {
+    .header {
+      margin: $main_margin--max400px;
+    }
   }
-  @media screen and (max-width:375px) {
-    .header{
-    margin: $main_margin--max375px;
-    padding: 0% 0% 1% 1%;}
+  @media screen and (max-width: 375px) {
+    .header {
+      margin: $main_margin--max375px;
+      padding: 0% 0% 1% 1%;
+    }
   }
-  
 }

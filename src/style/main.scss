@@ -1,8 +1,8 @@
 @import 'variables';
 @import 'mixins';
 
-@import 'components/header';
-@import 'components/footer';
+@import 'layout/header';
+@import 'layout/footer';
 @import 'components/banner';
 @import 'components/locations__list.scss';
 @import 'components/collapse.scss';
@@ -13,6 +13,15 @@
 @import 'pages/erreur.scss';
 @import 'pages/about.scss';
 
+html {
+  height: 100%;
+  width: auto;
+}
+body {
+  height: 100%;
+
+  width: auto;
+}
 #main {
   height: auto;
   overflow: hidden;
@@ -24,17 +33,16 @@
   @media screen and (max-width: 950px) {
     margin: $main_margin--max950px;
   }
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 800px) {
     margin: $main_margin--max800px;
   }
   @media screen and (max-width: 768px) {
     margin: $main_margin--mobile;
   }
-  @media screen and (max-width:400px) {
+  @media screen and (max-width: 400px) {
     margin: $main_margin--max400px;
-    
   }
-  @media screen and (max-width:375px) {
+  @media screen and (max-width: 375px) {
     margin: $main_margin--max375px;
     padding: 0% 0% 1% 1%;
   }
@@ -42,11 +50,19 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  min-width: 350px;
+  justify-content: space-between;
+  min-width: 320px;
+  height: 100%;
+  margin: 0%;
 }
 #root {
   display: flex;
   flex-direction: column;
+  // height: 100%;
+  
+  @media screen and (max-width: 768px) {
+    margin-bottom: -400px;
+  }
 }
 * {
   margin: 0px;

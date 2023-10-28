@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom'
 import HeaderLogoDesktop from '../assets/Logo/LOGO_desktop.png'
 import HeaderLogoMobile from '../assets/Logo/LOGO_mobile.png'
-import '../style/components/header.scss'
+import '../style/layout/header.scss'
 import '/src/style/main.scss'
 
 function Header() {
+  const accueil = 'Accueil'
+  const about = 'A Propos'
   return (
     <nav className="header">
       <a href={'/Accueil'} className="header__logo--desktop">
@@ -30,7 +32,7 @@ function Header() {
             return { textDecoration: isActive ? 'underline' : '' }
           }}
         >
-          ACCUEIL
+          Accueil
         </NavLink>
         <NavLink
           to="/About"
@@ -40,7 +42,7 @@ function Header() {
             return { textDecoration: isActive ? 'underline' : '' }
           }}
         >
-          A PROPOS
+          A Propos
         </NavLink>
       </div>
     </nav>

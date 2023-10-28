@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './layout/Header'
+import Footer from './layout/Footer'
 
 import About from './pages/About'
 import Accueil from './pages/Accueil'
@@ -11,6 +11,7 @@ import Erreur from './pages/Erreur'
 import LocationsPage from './pages/Location'
 import LocationsItem from './components/LocationsItem'
 import '../public/data/logements.json'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -18,8 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Header />
         <Routes>
           <Route path="/" element={<Accueil />} />
-          <Route path="/Accueil" element={<Accueil />}></Route>
-          <Route path="/About" element={<About />}></Route>
+          <Route path="/Accueil" element={<Accueil />} />
+          <Route path="/About" element={<About />} />
           <Route path="/Locations" element={<LocationsPage />}>
             <Route path=":id" element={<LocationsItem />} />
           </Route>
