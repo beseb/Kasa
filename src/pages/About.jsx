@@ -6,7 +6,6 @@ import Collapse from '../components/Collapse'
 import AboutDatas from '../../public/data/about.json'
 import Banner from '../components/Banner'
 
-// map les données pour les collapses
 function About() {
   const datas = AboutDatas
 

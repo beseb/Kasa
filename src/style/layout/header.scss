@@ -46,7 +46,10 @@
       gap: 20px;
       font-size: 0.7em;
       flex-wrap: nowrap;
-    
+    }
+    #header__links--accueil,
+    #header__links--about {
+      text-transform: uppercase;
     }
   }
   @media screen and (max-width: 400px) {
