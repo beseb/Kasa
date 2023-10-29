@@ -10,17 +10,19 @@ function About() {
   const datas = AboutDatas
 
   return (
-    <div id="main">
-      <Banner page="about" />
-      <div className="collapses__section" id="collapses_about_page">
-        {datas.map((data, index) => (
-          <Collapse
-            key={index}
-            title={data.title}
-            content={data.content}
-            page="about"
-          />
-        ))}
+    <div id="main" >
+      <div id="container_about_page">
+        <Banner page="about" id="banner_about_page"/>
+        <div className="collapses__section" id="collapses_about_page">
+          {datas.map((data, index) => (
+            <Collapse
+              key={index}
+              title={data.title}
+              content={data.content}
+              page="about"
+            />
+          ))}
+      </div>
       </div>
     </div>
   )

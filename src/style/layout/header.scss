@@ -38,7 +38,7 @@
     }
     .header__logo--mobile {
       display: block;
-      width: 130px;
+      width: 20vh;
       margin: 0px;
     }
     .header__links {
@@ -55,12 +55,21 @@
   @media screen and (max-width: 400px) {
     .header {
       margin: $main_margin--max400px;
+      .header__logo--mobile {
+        width: 15vh;
+      }
     }
   }
   @media screen and (max-width: 375px) {
     .header {
       margin: $main_margin--max375px;
-      padding: 0% 0% 1% 1%;
+      // padding: 0% 0% 1% 1%;
+      .header__links {
+        width: auto;
+        gap: 15px;
+        font-size: 0.7em;
+        flex-wrap: nowrap;
+      }
     }
   }
 }

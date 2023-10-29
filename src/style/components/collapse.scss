@@ -24,6 +24,7 @@
     font-size: 24px;
     @media screen and (max-width: 768px) {
       font-size: 14px;
+      height: $collapse_header-height*1.5;
     }
   }
   & .content {
@@ -32,7 +33,7 @@
     border-radius: 10px;
     height: 0;
     opacity: 0;
-    transition: all 1s ease;
+    transition: all 0.3s ease;
     position: relative;
     top: -$collapse_header-height;
     padding-left: 10px;
@@ -47,18 +48,18 @@
     &.open {
 
       font-size: 1em;
-      height: auto;
-      min-height: 160px;
+      // height: auto;
+      min-height: fit-content;
       padding-top: $collapse_header-height * 1.02;
       padding-left: 1em;
       padding-right: 1em;
       padding-bottom: 1em;
       opacity: 1;
-      transition: all 1s ease;
+      transition: all 0.3s ease;
 
       @media screen and (max-width:768px) {
         padding-top: 2em;
-        min-height: 0;
+        min-height: fit-content;
       }
     }
   }
