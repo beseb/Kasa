@@ -1,12 +1,17 @@
 ![D_Fiche-Logement](https://github.com/beseb/Kasa/assets/10258961/68d1d23f-97e4-4aed-8253-836270ce893e)
 
 # Kasa
-Repo du site web "Kasa", projet n°6 d'OpenClassrooms, dans le cadre de la formation Developpeur Web.
+## Description
+- Projet n°6 d'OpenClassrooms, dans le cadre de la formation Developpeur Web.
+- Made with 💖 with React, Vite & Sass !
 
-# Lancement
-Installer les dépendances avec "npm install", puis lancer le site avec "npm run dev".
+## Installation
+Récupérer le code depuis le dépôt et installer ensuite les dépendances avec le manageur de paquets souhaité : Npm, Yarn, Pnpm ... 
+Lancer le projet selon la méthode indiquée par son manageur de paquets utilisé.
 
-# React + Vite
+Enjoy ! 😊
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
