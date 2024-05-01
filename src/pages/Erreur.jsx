@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom'
-import '../style/pages/erreur.scss'
-// On importe le main scss car les marges sont écrites dans le main.scss
-import '/src/style/main.scss'
 
 function Erreur() {
   return (
