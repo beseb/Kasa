@@ -28,7 +28,7 @@
 
   &__text {
     position: relative;
-    width: 100%;
+    width: auto;
     height: 100%;
     grid-column: 1/2;
     grid-row: 1/2;
@@ -43,13 +43,14 @@
 
     .mobile-break {
       display: none;
+      width: auto;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
   .banner {
-    height: 15vh;
+    height: 12vh;
 
     .banner__text {
       @include h1_mixin(white, 'mobile');

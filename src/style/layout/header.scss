@@ -8,7 +8,6 @@
   align-items: center;
   width: auto;
   margin: $main-margin--desktop;
-
   height: 10%;
   .header__logo--desktop {
     display: block;
@@ -28,9 +27,8 @@
       color: $black-color;
     }
   }
-}
-@media screen and (max-width: 768px) {
-  .header {
+  @media screen and (max-width: 768px) {
+    // .header
     margin: $main_margin--mobile;
     gap: 20px;
     .header__logo--desktop {
@@ -38,38 +36,19 @@
     }
     .header__logo--mobile {
       display: block;
-      width: 20vh;
+      width: 35vw;
       margin: 0px;
     }
     .header__links {
       width: auto;
       gap: 20px;
-      font-size: 0.7em;
+      font-size: 1em;
+      font-weight: 600;
       flex-wrap: nowrap;
     }
     #header__links--accueil,
     #header__links--about {
       text-transform: uppercase;
-    }
-  }
-  @media screen and (max-width: 400px) {
-    .header {
-      margin: $main_margin--max400px;
-      .header__logo--mobile {
-        width: 15vh;
-      }
-    }
-  }
-  @media screen and (max-width: 375px) {
-    .header {
-      margin: $main_margin--max375px;
-      // padding: 0% 0% 1% 1%;
-      .header__links {
-        width: auto;
-        gap: 15px;
-        font-size: 0.7em;
-        flex-wrap: nowrap;
-      }
     }
   }
 }

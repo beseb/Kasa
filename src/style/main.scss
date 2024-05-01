@@ -14,10 +14,7 @@
 @import 'pages/about.scss';
 
 html {
-min-width: 320px;
-}
-body {
- 
+  min-width: 320px;
 }
 #main {
   overflow: hidden;
@@ -35,7 +32,6 @@ body {
   @media screen and (max-width: 768px) {
     margin: $main_margin--mobile;
     min-height: 70vh;
-    
   }
   @media screen and (max-width: 400px) {
     margin: $main_margin--max400px;
@@ -56,11 +52,13 @@ body {
 }
 #root {
   display: flex;
-  // flex-direction: column;
-  // height: 100%;
 }
 
 * {
   margin: 0px;
   padding: 0px;
+}
+
+a:visited {
+  color: $black-color;
 }

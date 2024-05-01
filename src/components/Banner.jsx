@@ -1,7 +1,4 @@
 /* eslint-disable react/prop-types */
-import '/src/style/components/banner.scss'
-// On importe le main scss car les marges sont écrites dans le main.scss
-import '/src/style/main.scss'
 import imgAccueil from '../assets/Banner/Image_source_1_Accueil.png'
 import imgAbout from '../assets/Banner/Image_source_2_About.png'
 
