@@ -19,13 +19,13 @@
   .header__links {
     display: flex;
     gap: 60px;
-    @include h2_mixin($primary-color, 'desktop');
+    @include h2_mixin($black-color, 'desktop');
 
     & a {
       text-decoration: none;
     }
     & a:visited {
-      color: $primary-color;
+      color: $black-color;
     }
   }
 }

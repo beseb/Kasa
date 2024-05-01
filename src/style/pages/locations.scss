@@ -42,10 +42,10 @@
       }
     }
     .location--city {
-      @include h2_mixin($primary-color, 'desktop');
+      @include h2_mixin($black-color, 'desktop');
       line-height: 20px;
       @media screen and (max-width: 768px) {
-        @include h2_mixin($primary-color, 'mobile');
+        @include h2_mixin($black-color, 'mobile');
       }
     }
   }

@@ -15,22 +15,22 @@
     box-sizing: border-box;
     height: $collapse_header-height;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 7px;
     margin: 0;
     padding: 10px;
     background-color: $primary-color;
-    
+
     @include h3_mixin(white, 'desktop');
     font-size: 24px;
     @media screen and (max-width: 768px) {
       font-size: 14px;
-      height: $collapse_header-height*1.5;
+      height: $collapse_header-height * 1.5;
     }
   }
   & .content {
-    @include p_mixin($primary-color, 'desktop');
+    @include p_mixin($black-color, 'desktop');
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 7px;
     height: 0;
     opacity: 0;
     transition: all 0.3s ease;
@@ -44,9 +44,8 @@
     @media screen and (max-width: 768px) {
       font-size: 12px;
     }
-    
-    &.open {
 
+    &.open {
       font-size: 1em;
       // height: auto;
       min-height: fit-content;
@@ -57,7 +56,7 @@
       opacity: 1;
       transition: all 0.3s ease;
 
-      @media screen and (max-width:768px) {
+      @media screen and (max-width: 768px) {
         padding-top: 2em;
         min-height: fit-content;
       }
