@@ -13,52 +13,56 @@
 @import 'pages/erreur.scss';
 @import 'pages/about.scss';
 
-html {
-  min-width: 320px;
-}
-#main {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: $main_margin--desktop;
-  @media screen and (max-width: 950px) {
-    margin: $main_margin--max950px;
-  }
-  @media screen and (max-width: 800px) {
-    margin: $main_margin--max800px;
-  }
-  @media screen and (max-width: 768px) {
-    margin: $main_margin--mobile;
-    min-height: 70vh;
-  }
-  @media screen and (max-width: 400px) {
-    margin: $main_margin--max400px;
-  }
-  @media screen and (max-width: 375px) {
-    margin: $main_margin--max375px;
-    padding: 0% 0% 1% 1%;
-  }
-}
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 320px;
-  // height: 100%;
-  margin: 0%;
-}
-#root {
-  display: flex;
-}
-
 * {
   margin: 0px;
   padding: 0px;
 }
+html {
+  height: auto;
 
-a:visited {
-  color: $black-color;
+  & body {
+    min-width: 320px;
+
+    & #root {
+      // display: flex;
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      margin: 0;
+
+      & #main {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: $main_margin--desktop;
+        @media screen and (max-width: 950px) {
+          margin: $main_margin--max950px;
+        }
+        @media screen and (max-width: 800px) {
+          margin: $main_margin--max800px;
+        }
+        @media screen and (max-width: 768px) {
+          margin: $main_margin--mobile;
+          min-height: 70vh;
+        }
+        @media screen and (max-width: 400px) {
+          margin: $main_margin--max400px;
+        }
+        @media screen and (max-width: 375px) {
+          margin: $main_margin--max375px;
+          padding: 0% 1%;
+        }
+
+        & a:visited {
+          color: $black-color;
+        }
+      }
+    }
+  }
 }

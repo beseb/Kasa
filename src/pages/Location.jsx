@@ -1,14 +1,14 @@
-import LocationsItem from "../components/LocationsItem";
-import {  useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom'
+import LocationsItems from '../components/LocationsItem'
+function LocationPage() {
+  // Récupération de l'id du logement depuis l'url
+  const { id } = useParams()
 
-function LocationPage(){
-    const {id} = useParams();
-    return (<div>
-        <LocationsItem id={id}/>
-        
+  return (
+    <div id="main">
+      <LocationsItems id={id} />
     </div>
-    )
+  )
 }
 
 export default LocationPage
-

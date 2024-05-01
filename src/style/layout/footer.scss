@@ -2,14 +2,9 @@
 @import '../mixins.scss';
 
 footer {
-  position: relative;
-  bottom: 0px;
-  left: 0px;
-
   width: 100%;
   height: $footer-height;
   min-height: $footer-height;
-  margin-bottom: 0%;
   background-color: black;
 
   display: flex;

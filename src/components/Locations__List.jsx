@@ -6,7 +6,7 @@ function Locations__List() {
   const [locations, setLocations] = useState([])
 
   useEffect(() => {
-    fetch('/data/logements.json')
+    fetch('/data/logements.json?url')
       .then((response) => response.json())
       .then((data) => {
         setLocations(data)

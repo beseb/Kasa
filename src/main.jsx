@@ -10,24 +10,21 @@ import Accueil from './pages/Accueil'
 import Erreur from './pages/Erreur'
 import LocationsPage from './pages/Location'
 import LocationsItem from './components/LocationsItem'
-import '../public/data/logements.json'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="app-container">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Accueil />} />
-          <Route path="/Accueil" element={<Accueil />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Locations" element={<LocationsPage />}>
-            <Route path=":id" element={<LocationsItem />} />
-          </Route>
-          <Route path="*" element={<Erreur />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/Accueil" element={<Accueil />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Locations" element={<LocationsPage />}>
+          <Route path=":id" element={<LocationsItem />} />
+        </Route>
+        <Route path="*" element={<Erreur />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>,
 )

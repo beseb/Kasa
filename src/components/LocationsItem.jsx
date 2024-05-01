@@ -8,7 +8,6 @@ import Location__Rating from './Location__Rating'
 import Slideshow from './Slideshow'
 import Collapse from './Collapse'
 import { useNavigate } from 'react-router-dom'
-import '../../public/data/logements.json'
 import { useEffect, useState } from 'react'
 
 function LocationsItem({ id }) {
@@ -16,10 +15,10 @@ function LocationsItem({ id }) {
   const [isLoading, setIsLoading] = useState(true)
   const navigate = useNavigate()
 
-  // On récupère l'id via l'URL du logement recherche en props
-  // On fetch toutes les infos depuis le json
+  // Récupération de l'id du logement depuis l'url, passé en props
+  // Fetch des données du logement
   useEffect(() => {
-    fetch('/data/logements.json')
+    fetch('/data/logements.json?url')
       .then((response) => response.json())
       .then((data) => {
         const foundLogement = data.find((element) => element.id === id)
