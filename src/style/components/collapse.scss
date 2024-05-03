@@ -46,18 +46,14 @@
     }
 
     &.open {
-      font-size: 1em;
-      // height: auto;
+      font-size: 1.1em;
+      height: auto;
       min-height: fit-content;
-      padding-top: $collapse_header-height * 1.02;
-      padding-left: 1em;
-      padding-right: 1em;
-      padding-bottom: 1em;
+      padding: 2.5em 1em 1em;
       opacity: 1;
       transition: all 0.3s ease;
 
       @media screen and (max-width: 768px) {
-        padding-top: 2em;
         min-height: fit-content;
       }
     }
